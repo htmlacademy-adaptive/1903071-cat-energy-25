@@ -3,3 +3,48 @@
   margin: 0;
   padding: 0;
 }
+
+.site-list__link {
+  display: block;
+  max-width: 175px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    margin-top: 42px;
+    margin-bottom: 74px;
+  }
+
+  .site-list__item:not(:nth-child(3)) {
+    margin-right: 34px;
+  }
+
+  .site-list__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    margin: 69px 110px 0 130px;
+  }
+
+  .site-list__link {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+}
