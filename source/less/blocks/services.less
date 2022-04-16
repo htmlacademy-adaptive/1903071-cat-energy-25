@@ -35,3 +35,44 @@
   text-transform: uppercase;
   color: #000000;
 }
+
+
+@media (min-width: @tablet-width) {
+  .services {
+    padding: 0 30px;
+  }
+
+  .services__item {
+    width: 100%;
+  }
+
+  .services__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .services__description {
+    width: 340px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .services__button {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .services {
+    padding: 0 110px;
+  }
+
+  .services__list {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+    margin-bottom: 71px;
+  }
+}

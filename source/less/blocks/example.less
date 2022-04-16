@@ -23,6 +23,34 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example__statistic-item {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: 32px;
+}
+
+.example__statistic-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.example__statistic-term {
+  font-size: 12px;
+  margin: 0;
+}
+
+.example__statistic-definition {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  margin: 0;
 }
 
 
@@ -35,4 +63,84 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+}
+
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 50%, #eaeaea 50%, #eaeaea 100%);
+  }
+
+  .example__wrapper {
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    margin: 0;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0;
+    margin-bottom: 63px;
+  }
+
+  .example__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
+
+  .example__statistic-term {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__statistic-definition {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__description-second {
+    width: 174px;
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    margin-left: auto;
+    transform: translateY(-50px);
+    margin-bottom: 97px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .example {
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 20%, #eaeaea 20%, #eaeaea 100%);
+  }
+
+  .example__wrapper {
+    width: calc(100% - 220px);
+    padding: 0 110px;
+    margin: 0;
+  }
+
+  .example__title {
+    margin-bottom: 146px;
+  }
+
+  .example__description {
+    width: 436px;
+    margin-bottom: 69px;
+  }
+
+  .example__statistic {
+    margin-bottom: 47px;
+  }
+
+  .example__description-second {
+    width: 270px;
+    transform: none;
+    margin: 0;
+    text-align: center;
+  }
 }

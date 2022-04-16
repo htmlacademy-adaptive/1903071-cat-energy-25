@@ -19,3 +19,36 @@
   padding: 0;
   list-style-type: none;
 }
+
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding: 0 30px;
+  }
+
+  .advantages__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    gap: 37px 150px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    padding: 0 110px;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 69px;
+  }
+}
