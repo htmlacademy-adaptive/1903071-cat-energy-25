@@ -22,6 +22,7 @@
   .main-nav {
     position: relative;
     width: 720px;
+    color: #ffffff;
 
     &::before {
       position: absolute;
@@ -42,5 +43,19 @@
       height: 694px;
       z-index: -2;
     }
+  }
+
+  .main-nav--inner {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .main-nav--inner a {
+    color: #000000;
   }
 }

@@ -3,3 +3,21 @@
   margin: 0;
   padding: 0;
 }
+
+
+@media (min-width: @tablet-width) {
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 62px 80px;
+  }
+}
