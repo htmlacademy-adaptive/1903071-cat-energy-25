@@ -2,11 +2,15 @@
   margin-bottom: 34px;
 }
 
+.additionally__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 .additionally__control {
   display: block;
 }
-
 
 .additionally__label {
   font-family: "Oswald", "Arial", sans-serif;
@@ -16,4 +20,33 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #000000;
+}
+
+
+@media (min-width: @tablet-width) {
+  .additionally {
+    margin-bottom: 54px;
+  }
+
+  .additionally__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .additionally__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .additionally {
+    margin-bottom: 61px;
+  }
+
+  .additionally__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

@@ -34,3 +34,40 @@
   margin: 0;
   margin-bottom: 32px;
 }
+
+
+@media (min-width: @tablet-width) {
+  .application__group-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .application__bottom {
+    display: flex;
+    margin-bottom: 72px;
+  }
+
+  .application__button {
+    min-width: 282px;
+    min-height: 52px;
+    margin-right: 61px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .application__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 69px;
+  }
+
+  .application__bottom {
+    display: flex;
+    margin-bottom: 72px;
+  }
+
+  .application__button {
+    min-width: 568px;
+    margin-right: 81px;
+  }
+}

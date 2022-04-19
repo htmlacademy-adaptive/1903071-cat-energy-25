@@ -4,7 +4,6 @@
   width: 100%;
   min-height: 290px;
   background: url("../../img/bounty-bg-image.jpg") no-repeat 20px;
-  background-size: contain;
   box-sizing: border-box;
   margin-bottom: 35px;
 
@@ -32,4 +31,31 @@
   width: 161px;
   margin: 0;
   z-index: 2;
+}
+
+
+@media (min-width: @tablet-width) {
+  .bounty {
+    padding: 0;
+    background-size: cover;
+    background-position: 0;
+    margin-bottom: 76px;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .bounty {
+    width: 245px;
+    background-size: auto;
+    margin: 0;
+
+    &::after {
+      width: 100%;
+    }
+  }
 }

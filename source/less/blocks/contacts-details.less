@@ -2,6 +2,11 @@
   margin-bottom: 24px;
 }
 
+.contacts-details__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 .contacts-details__title {
   font-family: "Oswald", "Arial", sans-serif;
@@ -11,4 +16,24 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+}
+
+
+@media (min-width: @tablet-width) {
+  .contacts-details {
+    margin-bottom: 65px;
+  }
+
+  .contacts-details__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .contacts-details__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
