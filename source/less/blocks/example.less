@@ -1,5 +1,6 @@
 .example {
   background-color: #eaeaea;
+  padding: 25px 0 40px;
 }
 
 .example__wrapper {
@@ -15,9 +16,14 @@
   font-size: 36px;
   line-height: 40px;
   color: #000000;
-  margin: 25px 0 40px 0;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
+.example__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
 
 .example__statistic {
   margin: 0;
@@ -25,21 +31,27 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .example__statistic-item {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
-  margin-right: 32px;
-}
-
-.example__statistic-item:nth-child(2n) {
-  margin-right: 0;
+  align-items: center;
+  margin-bottom: 34px;
 }
 
 .example__statistic-term {
+  position: absolute;
+  bottom: -14px;
+  width: 87px;
   font-size: 12px;
+  line-height: 12px;
+  text-align: center;
   margin: 0;
+  background-color: #eaeaea;
+  z-index: 2;
 }
 
 .example__statistic-definition {
@@ -49,8 +61,15 @@
   font-size: 24px;
   line-height: 24px;
   text-align: center;
+  text-transform: uppercase;
   color: #000000;
   margin: 0;
+  padding-top: 14px;
+  min-width: 124px;
+  min-height: 56px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
 
@@ -63,15 +82,19 @@
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 
 @media (min-width: @tablet-width) {
   .example {
     background-image: linear-gradient(to bottom, #ffffff, #ffffff 50%, #eaeaea 50%, #eaeaea 100%);
+    padding: 43px 0 62px;
   }
 
   .example__wrapper {
+    position: relative;
     width: calc(100% - 60px);
     padding: 0 30px;
     margin: 0;
@@ -90,24 +113,39 @@
     margin-bottom: 54px;
   }
 
+  .example__statistic {
+    justify-content: flex-start;
+  }
+
+  .example__statistic-item {
+    margin-right: 42px;
+    margin-bottom: 85px;
+  }
+
   .example__statistic-term {
-    font-size: 16px;
-    line-height: 24px;
+    bottom: -15px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
   }
 
   .example__statistic-definition {
+    min-width: 162px;
+    padding: 15px 0 20px;
     font-size: 30px;
     line-height: 37px;
   }
 
   .example__description-second {
+    position: absolute;
+    right: 30px;
+    top: 270px;
     width: 174px;
     text-align: right;
     font-size: 20px;
     line-height: 20px;
     margin: 0;
     margin-left: auto;
-    transform: translateY(-50px);
     margin-bottom: 97px;
   }
 }
@@ -115,7 +153,7 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff 20%, #eaeaea 20%, #eaeaea 100%);
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 20%, #f2f2f2 20%, #f2f2f2 100%);
   }
 
   .example__wrapper {
@@ -133,13 +171,13 @@
     margin-bottom: 69px;
   }
 
-  .example__statistic {
-    margin-bottom: 47px;
+  .example__statistic-term {
+    background-color: #f2f2f2;
   }
 
   .example__description-second {
+    position: static;
     width: 270px;
-    transform: none;
     margin: 0;
     text-align: center;
   }
