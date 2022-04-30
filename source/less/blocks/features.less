@@ -1,5 +1,36 @@
 .features {
+  font-size: 12px;
+  line-height: 16px;
   list-style-type: none;
   margin: 0;
+  margin-bottom: 22px;
   padding: 0;
+}
+
+.features__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__term {
+  margin: 0;
+}
+
+.features__value {
+  margin: 0;
+}
+
+
+@media (min-width: @tablet-width) {
+  .features {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 33px;
+  }
+
+  .features__item {
+    padding-bottom: 9px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid #cdcdcd;
+  }
 }

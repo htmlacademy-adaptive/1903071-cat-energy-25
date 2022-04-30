@@ -1,4 +1,35 @@
 .additional-products-features {
+  display: flex;
+  justify-content: space-between;
   font-size: 14px;
   line-height: 14px;
+  margin-bottom: 15px;
+}
+
+.additional-products-features__term {
+  margin: 0;
+}
+
+.additional-products-features__value {
+  margin: 0;
+}
+
+
+@media (min-width: @tablet-width) {
+  .additional-products-features {
+    justify-content: flex-end;
+    margin-right: 38px;
+  }
+
+  .additional-products-features__term {
+    margin-right: 50px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .additional-products-features {
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
 }

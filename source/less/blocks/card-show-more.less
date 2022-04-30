@@ -2,11 +2,9 @@
   border-bottom: 1px solid #ebebeb;
 }
 
-
 .card-show-more__wrapper {
   padding: 25px 20px;
 }
-
 
 .card-show-more__title {
   font-family: "Oswald", "Arial", sans-serif;
@@ -33,10 +31,47 @@
   margin-bottom: 21px;
 }
 
-
 .card-show-more__button-plus {
   display: block;
   width: 30px;
   height: 30px;
   margin: 0 auto 23px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .card-show-more {
+    min-height: 507px;
+    border: 2px solid #f2f2f2;
+  }
+
+  .card-show-more__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+    padding: 0 35px;
+  }
+
+  .card-show-more__title {
+    width: 134px;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+
+  .card-show-more__description {
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    margin-bottom: 87px;
+  }
+
+  .card-show-more__button {
+    width: 100%;
+    margin-bottom: 39px;
+  }
 }

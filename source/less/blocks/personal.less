@@ -1,10 +1,12 @@
 .personal {
-  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 
-.personal__title {
-  display: block;
+.personal__group {
+  display: flex;
+  align-items: center;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -12,16 +14,58 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  margin-bottom: 14px;
+}
+
+.personal__title {
+  display: block;
+  margin-right: 12px;
+}
+
+.personal__input {
+  min-height: 45px;
+  width: calc(100% - 10px);
+  padding: 0 15px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+  border: 1px solid #e7e7e7;
 }
 
 
 @media (min-width: @tablet-width) {
   .personal {
+    padding: 0;
     margin-bottom: 72px;
+    border-style: none;
   }
 
-  .personal__title {
+  .personal__group {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .personal__input {
+    min-height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 18px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .personal {
+    width: 50%;
+    margin: 0;
+    margin-right: 80px;
+  }
+
+  .personal__wrapper {
+    margin-right: 0;
   }
 }

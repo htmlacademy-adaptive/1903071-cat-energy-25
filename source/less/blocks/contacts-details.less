@@ -2,13 +2,36 @@
   margin-bottom: 24px;
 }
 
+.contacts-details__group-title {
+  position: relative;
+  width: 200px;
+  margin-bottom: 36px;
+  margin-left: 20px;
+
+  &::after {
+    position: absolute;
+    top: 14px;
+    left: 100%;
+    content: "";
+    width: 99px;
+    height: 2px;
+    background-color: #68b738;
+  }
+}
+
 .contacts-details__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.contacts-details__title {
+.contacts-details__item {
+  position: relative;
+}
+
+.contacts-details__group {
+  display: flex;
+  align-items: center;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -16,6 +39,32 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  margin-bottom: 14px;
+}
+
+.contacts-details__title {
+  display: block;
+  margin-right: 12px;
+}
+
+.contacts-details__input {
+  min-height: 45px;
+  width: calc(100% - 10px);
+  padding: 0 40px 0 15px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+  border: 1px solid #cdcdcd;
+}
+
+.contacts-details__icon {
+  position: absolute;
+  right: 18px;
+  top: 16px;
 }
 
 
@@ -24,7 +73,38 @@
     margin-bottom: 65px;
   }
 
-  .contacts-details__title {
+  .contacts-details__group-title {
+    padding-left: 70px;
+    margin-left: 0;
+    width: 550px;
+
+    &::after {
+      top: 20px;
+      left: 100%;
+      content: "";
+      width: 145px;
+      height: 2px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: #68b738;
+    }
+  }
+
+  .contacts-details__group {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contacts-details__input {
+    min-height: 52px;
+    padding: 0 50px 0 18px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -35,5 +115,27 @@
   .contacts-details__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 78px;
+  }
+
+  .contacts-details__group-title {
+    padding-left: 110px;
+    margin-left: 0;
+    width: 550px;
+
+    &::after {
+      top: 20px;
+      left: 100%;
+      content: "";
+      width: 778px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      content: "";
+      width: 70px;
+    }
   }
 }

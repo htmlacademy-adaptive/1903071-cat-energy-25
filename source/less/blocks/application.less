@@ -1,9 +1,12 @@
+.application__wrapper {
+  margin: 0 20px;
+}
+
 .application__group {
   margin: 0;
   padding: 0;
   border-style: none;
 }
-
 
 .application__group-title {
   font-family: "Oswald", "Arial", sans-serif;
@@ -13,15 +16,17 @@
   line-height: 26px;
   color: #000000;
   padding: 0;
-  margin-bottom: 36px;
 }
 
+.application__bottom {
+  padding: 0 20px;
+}
 
 .application__button {
+  width: 100%;
   border-style: none;
   margin-bottom: 21px;
 }
-
 
 .application__clarification {
   font-family: "Arial", sans-serif;
@@ -37,6 +42,10 @@
 
 
 @media (min-width: @tablet-width) {
+  .application__wrapper {
+    margin: 0 70px;
+  }
+
   .application__group-title {
     font-size: 36px;
     line-height: 36px;
@@ -45,19 +54,24 @@
   .application__bottom {
     display: flex;
     margin-bottom: 72px;
+    padding: 0 70px;
   }
 
   .application__button {
-    min-width: 282px;
+    width: 282px;
     min-height: 52px;
+    margin: 0;
     margin-right: 61px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .application__wrapper {
+    margin: 0 110px;
+  }
+
   .application__top {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 69px;
   }
 
