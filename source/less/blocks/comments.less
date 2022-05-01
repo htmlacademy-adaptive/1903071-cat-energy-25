@@ -2,8 +2,28 @@
   margin-bottom: 22px;
 }
 
+.comments__group-title {
+  position: relative;
+  width: 142px;
+  margin-left: 20px;
+  margin-bottom: 37px;
+
+  &::after {
+    position: absolute;
+    top: 14px;
+    left: 100%;
+    content: "";
+    width: 158px;
+    height: 2px;
+    background-color: #68b738;
+  }
+}
 
 .comments__input {
+  padding: 9px 15px;
+  width: calc(100% - 30px);
+  min-height: 150px;
+
   &::placeholder {
     font-family: "Oswald", "Arial", sans-serif;
     font-style: normal;
@@ -21,10 +41,61 @@
     margin-bottom: 65px;
   }
 
+  .comments__group-title {
+    padding-left: 70px;
+    margin-left: 0;
+    width: 218px;
+
+    &::after {
+      top: 20px;
+      left: 100%;
+      content: "";
+      width: 478px;
+      height: 2px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: #68b738;
+    }
+  }
+
   .comments__input {
+    padding: 10px 19px;
+    min-height: 174px;
+
     &::placeholder {
       font-size: 20px;
       line-height: 30px;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .comments__group-title {
+    padding-left: 110px;
+    margin-left: 0;
+    width: 218px;
+
+    &::after {
+      top: 20px;
+      left: 100%;
+      content: "";
+      width: 1110px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      content: "";
+      width: 70px;
     }
   }
 }

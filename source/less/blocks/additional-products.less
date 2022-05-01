@@ -1,10 +1,9 @@
-.additional-products {
+.additional-products__wrapper {
   padding: 0 20px;
 }
 
-
 .additional-products__title {
-  display: block;
+  position: relative;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -12,13 +11,54 @@
   line-height: 24px;
   color: #000000;
   padding: 25px 0 36px 0;
-  margin: 0;
+  margin: 0 20px 0 20px;
   border-bottom: 1px solid #cdcdcd;
+
+  &::after {
+    position: absolute;
+    top: 38px;
+    right: -20px;
+    content: "";
+    width: 53px;
+    height: 2px;
+    background-color: #68b738;
+  }
 }
+
 
 @media (min-width: @tablet-width) {
   .additional-products {
+    margin-bottom: 69px;
+  }
+
+  .additional-products__title {
+    width: 340px;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 36px;
+    margin: 0 0 80px 0;
+    border-style: none;
+
+    &::after {
+      top: 22px;
+      left: 100%;
+      width: 328px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 22px;
+      right: 100%;
+      content: "";
+      height: 2px;
+      width: 30px;
+      background-color: #68b738;
+    }
+  }
+
+  .additional-products__wrapper {
     padding: 0;
+    border: 1px solid #cdcdcd;
   }
 }
 
@@ -27,5 +67,25 @@
   .additional-products {
     width: 896px;
     margin-right: 80px;
+  }
+
+  .additional-products__title {
+    padding: 0;
+    padding-right: 35px;
+
+    &::after {
+      width: 950px;
+      left: 100%;
+    }
+
+    &::before {
+      width: 70px;
+      right: calc(100% + 30px);
+    }
+  }
+
+  .additional-products__wrapper {
+    border-style: none;
+    border-top: 1px solid #cdcdcd;
   }
 }

@@ -1,5 +1,7 @@
 .program {
-  margin-bottom: 26px;
+  padding-top: 28px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 24px;
 }
 
 
@@ -12,15 +14,37 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
+  margin-bottom: 25px;
 }
 
 @media (min-width: @tablet-width) {
   .program {
+    padding: 0;
     margin-bottom: 75px;
+    border-style: none;
+  }
+
+  .program__wrapper {
+    padding: 30px 88px 7px;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
   }
 
   .program__control {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 23px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .program {
+    width: calc(50% - 80px);
+    margin: 0;
+  }
+
+  .program__wrapper {
+    margin-left: 0;
   }
 }
