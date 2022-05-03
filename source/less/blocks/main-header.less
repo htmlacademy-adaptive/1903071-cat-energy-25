@@ -3,16 +3,22 @@
 }
 
 .main-header__logo {
-  display: flex;
-  align-items: center;
+  display: block;
   padding-top: 10px;
   padding-bottom: 16px;
   border-bottom: 1px solid #e6e6e6;
 }
 
 .main-header__logo-image {
+  display: inline-block;
+  vertical-align: middle;
   margin-right: 56px;
   margin-left: 20px;
+}
+
+.main-header__logo-text {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 
@@ -30,6 +36,12 @@
     padding: 0;
   }
 
+  .main-header__logo-image {
+    width: 174px;
+    height: auto;
+    margin: 0;
+  }
+
   .main-header__logo-text {
     display: none;
   }
@@ -45,5 +57,9 @@
   .main-header__logo {
     margin-top: 53px;
     margin-bottom: 111px;
+  }
+
+  .main-header__logo-image {
+    width: 202px;
   }
 }

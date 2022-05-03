@@ -7,6 +7,11 @@
     height: 302px;
     content: "";
     background: url("../../img/background-cat.jpg") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background-cat@2x.jpg");
+      background-size: 320px auto;
+    }
   }
 
   &::after {
@@ -89,6 +94,11 @@
     margin-left: 87px;
   }
 
+  .main-index__image {
+    width: 100%;
+    height: auto;
+  }
+
   .main-index__form-button {
     position: absolute;
     top: 220px;
@@ -119,6 +129,8 @@
   .main-index__image {
     position: absolute;
     top: -70px;
-    left: 40%;
+    left: 39%;
+    width: 552px;
+    height: auto;
   }
 }
