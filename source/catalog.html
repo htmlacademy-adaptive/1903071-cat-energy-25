@@ -4,12 +4,19 @@
     <meta charset="utf-8">
     <title>Каталог продукции</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип.">
+        </picture>
         <img class="main-header__logo-text" src="img/logo-text.svg" width="101" height="18" alt="Логотип.">
       </a>
       <nav class="main-nav main-nav--inner main-nav--closed main-nav--nojs">
@@ -36,7 +43,12 @@
         <ul class="catalog__list product-list">
           <li class="product-list__item product-card">
             <div class="product-card__wrapper">
-              <img class="product-card__image" src="img/product-card-image-1.jpg" width="68" height="86" alt="Корм для кошек Cat Energy pro со вкусом курицы 500 граммов.">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="img/product-card-image-1-tablet.png 1x, img/product-card-image-1-tablet@2x.png 2x">
+                  <img class="product-card__image" src="img/product-card-image-1.jpg" srcset="img/product-card-image-1@2x.jpg 2x" width="68" height="86" alt="Корм для кошек Cat Energy pro со вкусом курицы 500 граммов.">
+                </picture>
+              </div>
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
               <ul class="product-card__list features">
                 <li class="features__item">
@@ -57,7 +69,12 @@
           </li>
           <li class="product-list__item product-card">
             <div class="product-card__wrapper">
-              <img class="product-card__image" src="img/product-card-image-2.jpg" width="84" height="101" alt="Корм для кошек Cat Energy pro со вкусом курицы 1000 граммов.">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="img/product-card-image-2-tablet.png 1x, img/product-card-image-2-tablet@2x.png 2x">
+                  <img class="product-card__image" src="img/product-card-image-2.jpg" srcset="img/product-card-image-2@2x.jpg 2x" width="84" height="101" alt="Корм для кошек Cat Energy pro со вкусом курицы 1000 граммов.">
+                </picture>
+              </div>
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
               <ul class="product-card__list features">
                 <li class="features__item">
@@ -78,7 +95,12 @@
           </li>
           <li class="product-list__item product-card">
             <div class="product-card__wrapper">
-              <img class="product-card__image" src="img/product-card-image-3.jpg" width="68" height="78" alt="Корм для кошек Cat Energy pro со вкусом рыбы 500 граммов.">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="img/product-card-image-3-tablet.png 1x, img/product-card-image-3-tablet@2x.png 2x">
+                  <img class="product-card__image" src="img/product-card-image-3.jpg" srcset="img/product-card-image-3@2x.jpg 2x" width="68" height="78" alt="Корм для кошек Cat Energy pro со вкусом рыбы 500 граммов.">
+                </picture>
+              </div>
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
               <ul class="product-card__list features">
                 <li class="features__item">
@@ -99,7 +121,12 @@
           </li>
           <li class="product-list__item product-card">
             <div class="product-card__wrapper">
-              <img class="product-card__image" src="img/product-card-image-4.jpg" width="84" height="101" alt="Корм для кошек Cat Energy pro со вкусом рыбы 1000 граммов.">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="img/product-card-image-4-tablet.png 1x, img/product-card-image-4-tablet@2x.png 2x">
+                  <img class="product-card__image" src="img/product-card-image-4.jpg" srcset="img/product-card-image-4@2x.jpg 2x" width="84" height="101" alt="Корм для кошек Cat Energy pro со вкусом рыбы 1000 граммов.">
+                </picture>
+              </div>
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
               <ul class="product-card__list features">
                 <li class="features__item">
@@ -120,7 +147,12 @@
           </li>
           <li class="product-list__item product-card">
             <div class="product-card__wrapper">
-              <img class="product-card__image" src="img/product-card-image-5.jpg" width="68" height="78" alt="Корм для кошек Cat Energy slim со вкусом гречки 500 граммов.">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="img/product-card-image-5-tablet.png 1x, img/product-card-image-5-tablet@2x.png 2x">
+                  <img class="product-card__image" src="img/product-card-image-5.jpg" srcset="img/product-card-image-5@2x.jpg 2x" width="68" height="78" alt="Корм для кошек Cat Energy slim со вкусом гречки 500 граммов.">
+                </picture>
+              </div>
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
               <ul class="product-card__list features">
                 <li class="features__item">
@@ -141,7 +173,12 @@
           </li>
           <li class="product-list__item product-card">
             <div class="product-card__wrapper">
-              <img class="product-card__image" src="img/product-card-image-6.jpg" width="84" height="100" alt="Корм для кошек Cat Energy slim со вкусом гречки 1000 граммов.">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="img/product-card-image-6-tablet.png 1x, img/product-card-image-6-tablet@2x.png 2x">
+                  <img class="product-card__image" src="img/product-card-image-6.jpg" srcset="img/product-card-image-6@2x.jpg 2x" width="84" height="100" alt="Корм для кошек Cat Energy slim со вкусом гречки 1000 граммов.">
+                </picture>
+              </div>
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
               <ul class="product-card__list features">
                 <li class="features__item">
@@ -162,7 +199,12 @@
           </li>
           <li class="product-list__item product-card">
             <div class="product-card__wrapper">
-              <img class="product-card__image" src="img/product-card-image-7.jpg" width="72" height="84" alt="Корм для кошек Cat Energy slim со вкусом риса 500 граммов.">
+              <div class="product-card__image-wrapper">
+                <picture>
+                  <source media="(min-width: 720px)" srcset="img/product-card-image-7-tablet.png 1x, img/product-card-image-7-tablet@2x.png 2x">
+                  <img class="product-card__image" src="img/product-card-image-7.jpg" srcset="img/product-card-image-7@2x.jpg 2x" width="72" height="84" alt="Корм для кошек Cat Energy slim со вкусом риса 500 граммов.">
+                </picture>
+              </div>
               <h3 class="product-card__title">Cat Energy PRO 500 г</h3>
               <dl class="product-card__list features">
                 <li class="features__item">
