@@ -2,13 +2,13 @@
   position: relative;
   padding: 0 20px;
   width: 100%;
-  min-height: 290px;
-  background: url("../../img/bounty-bg-image.jpg") no-repeat 20px;
+  height: 290px;
+  background: url("../img/bounty-bg-image.jpg") no-repeat 20px;
   box-sizing: border-box;
   margin-bottom: 35px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/bounty-bg-image@2x.jpg");
+    background-image: url("../img/bounty-bg-image@2x.jpg");
     background-size: 280px auto;
   }
 
@@ -19,6 +19,18 @@
     height: 100%;
     background-color: rgba(104, 183, 56, 0.85);
     z-index: 1;
+  }
+
+  &::before {
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 78px;
+    height: 80px;
+    z-index: 2;
+    background: url("../img/bounty-icon.svg") no-repeat;
   }
 }
 
@@ -41,14 +53,30 @@
 
 @media (min-width: @tablet-width) {
   .bounty {
+    height: 200px;
     padding: 0;
     background-size: cover;
-    background-position: 0;
+    background-position: 0 60%;
     margin-bottom: 76px;
 
     &::after {
       width: 100%;
     }
+
+    &::before {
+      top: 50%;
+      left: 77px;
+      transform: translateY(-50%);
+      width: 80px;
+      height: 82px;
+    }
+  }
+
+  .bounty__title {
+    top: 50%;
+    left: auto;
+    right: 124px;
+    transform: translateY(-50%);
   }
 }
 
@@ -56,12 +84,25 @@
 @media (min-width: @desktop-width) {
   .bounty {
     width: 245px;
+    height: 278px;
     background-position: right;
     margin: 0;
-    margin-top: 40px;
+    margin-top: 45px;
 
     &::after {
       width: 100%;
     }
+
+    &::before {
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .bounty__title {
+    top: auto;
+    right: 43px;
+    bottom: 2px;
   }
 }

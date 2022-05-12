@@ -35,15 +35,23 @@
 
 .services__button {
   display: block;
+  position: relative;
+  width: 134px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  text-align: left;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.services__button-icon {
+  position: absolute;
+  top: 1px;
+  right: 8px;
 }
 
 
@@ -73,8 +81,14 @@
   }
 
   .services__button {
+    width: 165px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .services__button-icon {
+    top: 10px;
+    right: 8px;
   }
 }
 
@@ -96,6 +110,7 @@
   }
 
   .services__description {
+    width: 465px;
     margin-bottom: 27px;
   }
 }

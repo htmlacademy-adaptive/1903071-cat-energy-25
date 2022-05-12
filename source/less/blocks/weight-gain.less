@@ -5,9 +5,44 @@
   &::after {
     content: "";
     position: absolute;
-    left: -70px;
+    top: -8px;
+    left: -77px;
     width: 67px;
     height: 50px;
-    background: url("../../img/cat-weight-gain.svg") no-repeat;
+    background: url("../img/cat-weight-gain.svg") no-repeat;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .weight-gain__title {
+    margin-left: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: calc(100% - 250px);
+      width: 268px;
+      height: 200px;
+      background-size: contain;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .weight-gain__title {
+    margin-left: 162px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -35px;
+      left: -180px;
+      width: 134px;
+      height: 100px;
+      background-size: contain;
+    }
   }
 }
