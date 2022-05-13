@@ -40,6 +40,9 @@
       <h1 class="main-index__title">Функциональное питание для котов</h1>
       <p class="main-index__title-description">Занялся собой? Займись котом!</p>
       <picture>
+        <source media="(min-width: 1440px)" srcset="img/main-image-desktop.webp 1x, img/main-image-desktop@2x.webp 2x">
+        <source media="(min-width: 768px)" type="image/webp" srcset="img/main-image-tablet.webp 1x, img/main-image-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/main-image-mobile.webp 1x, img/main-image-mobile@2x.webp 2x">
         <source media="(min-width: 1440px)" srcset="img/main-image-desktop.png 1x, img/main-image-desktop@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/main-image-tablet.png 1x, img/main-image-tablet@2x.png 2x">
         <img class="main-index__image" src="img/main-image-mobile.png" srcset="img/main-image-mobile@2x.png 2x" width="280" height="270" alt="Питание для котов cat energy pro со вкусом курицы.">
@@ -53,7 +56,7 @@
               Похудение
             </h3>
             <p class="services__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="services__button" href="#">Каталог slim
+            <a class="services__button" href="catalog.html#catalog-slim" aria-label="Перейти к каталогу для похудения.">Каталог slim
               <svg class="services__button-icon" width="24" height="12">
                 <use href="img/sprite.svg#arrow-icon"></use>
               </svg>
@@ -64,7 +67,7 @@
               Набор массы
             </h3>
             <p class="services__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="services__button" href="#">Каталог pro
+            <a class="services__button" href="catalog.html#catalog-pro" aria-label="Перейти к каталогу для набора массы.">Каталог pro
               <svg class="services__button-icon" width="24" height="12">
                 <use href="img/sprite.svg#arrow-icon"></use>
               </svg>
@@ -157,21 +160,21 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="socials__list">
             <li class="socials__item">
-              <a class="socials__button vkontakte">
+              <a class="socials__button vkontakte" href="https://vk.com/htmlacademy" aria-label="Страница html-academy в vk.">
                 <svg class="socials__button-icon" width="27" height="17">
                   <use href="img/sprite.svg#vk-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__button youtube">
+              <a class="socials__button youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="Страница html-academy в youtube.">
                 <svg class="socials__button-icon" width="24" height="19">
                   <use href="img/sprite.svg#youtube-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__button telegram">
+              <a class="socials__button telegram" href="tg://resolve?domain=htmlacademy" aria-label="Telegram html-academy.">
                 <svg class="socials__button-icon" width="20" height="18">
                   <use href="img/sprite.svg#tg-icon"></use>
                 </svg>
@@ -179,7 +182,7 @@
             </li>
           </ul>
         </section>
-        <a class="html-academy">
+        <a class="html-academy" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="html-academy__text">HTML Academy</span>
           <img class="html-academy__logo" src="img/html-academy.svg" width="27" height="34" alt="Логотип HTML Academy.">
         </a>
