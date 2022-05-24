@@ -34,15 +34,33 @@
   }
 
   .site-list__link {
+    position: relative;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #000000;
     padding: 0;
     border-style: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--active::after {
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #68b738;
+    }
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .site-list {
@@ -54,5 +72,15 @@
     line-height: 30px;
     color: #ffffff;
     background-color: transparent;
+
+    &--index::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #ffffff;
+    }
   }
 }

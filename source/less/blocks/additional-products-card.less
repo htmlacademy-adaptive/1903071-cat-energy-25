@@ -1,8 +1,7 @@
 .additional-products-card {
   border-bottom: 1px solid #cdcdcd;
-  padding: 13px 0 19px 0;
+  padding: 13px 0 18px 0;
 }
-
 
 .additional-products-card__title {
   font-family: "Oswald", "Arial", sans-serif;
@@ -16,11 +15,19 @@
   margin-bottom: 13px;
 }
 
+.additional-products-card__button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
 
 @media (min-width: @tablet-width) {
   .additional-products-card {
     display: grid;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 270px;
     grid-template-rows: 1fr 1fr;
     padding: 26px 0 28px 0;
   }
@@ -28,11 +35,13 @@
   .additional-products-card__title {
     grid-area: 1 / 1 / 2 / 2;
     margin-left: 38px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .additional-products-card__button {
     grid-area: 2 / 1 / -1 / -1;
-    margin: 0 38px 0;
+    margin: 2px 36px 0;
   }
 }
 
@@ -40,10 +49,10 @@
 @media (min-width: @desktop-width) {
   .additional-products-card {
     display: grid;
-    grid-template-columns: 1fr 250px 244px;
+    grid-template-columns: 1fr 325px 244px;
     grid-template-rows: 1fr;
     align-items: center;
-    padding: 14px 0 16px 0;
+    padding: 14px 0 17px 0;
   }
 
   .additional-products-card__title {
