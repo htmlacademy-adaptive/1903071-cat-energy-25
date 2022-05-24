@@ -36,6 +36,10 @@
     height: 60px;
     background-color: #68b738;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__item-first::after {
@@ -102,7 +106,7 @@
   .advantages__list {
     display: grid;
     grid-template-columns: 250px 250px;
-    gap: 37px 150px;
+    gap: 37px 135px;
   }
 
   .advantages__item {
@@ -156,12 +160,13 @@
 @media (min-width: @desktop-width) {
   .advantages {
     padding: 0 110px;
+    border-style: none;
   }
 
   .advantages__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 80px;
-    margin-bottom: 69px;
+    margin-bottom: 25px;
   }
 }

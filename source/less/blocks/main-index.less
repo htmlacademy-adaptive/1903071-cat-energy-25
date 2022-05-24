@@ -34,6 +34,7 @@
   line-height: 36px;
   text-align: center;
   color: #ffffff;
+  padding-top: 27px;
   margin: 0;
   margin-bottom: 25px;
   z-index: 2;
@@ -48,6 +49,7 @@
   font-size: 14px;
   line-height: 14px;
   text-align: center;
+  text-transform: uppercase;
   color: #ffffff;
   margin: 0;
   margin-bottom: 29px;
@@ -57,11 +59,27 @@
 
 .main-index__image {
   position: relative;
+  display: block;
+  left: 20px;
   z-index: 2;
+  margin-bottom: 3px;
 }
 
 .main-index__form-button {
-  width: 100%;
+  display: block;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #68b738;
+  color: #ffffff;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 10px 0;
+  width: calc(100% - 40px);
   margin: 0 auto 20px;
 }
 
@@ -80,8 +98,9 @@
     font-size: 60px;
     line-height: 60px;
     color: #000000;
-    margin-left: 87px;
+    margin-left: 118px;
     margin-bottom: 41px;
+    padding: 0;
     text-align: left;
   }
 
@@ -90,21 +109,27 @@
     line-height: 20px;
     color: #000000;
     margin-bottom: 20px;
+    margin-left: 118px;
     text-align: left;
-    margin-left: 87px;
   }
 
   .main-index__image {
-    width: 100%;
-    height: auto;
+    width: calc(100% - 60px);
+    left: 28px;
+    height: 608px;
   }
 
   .main-index__form-button {
     position: absolute;
-    top: 220px;
+    top: 230px;
+    left: 30px;
     width: 244px;
+    min-height: 54px;
     margin: 0 0 0 90px;
     z-index: 3;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 0;
   }
 }
 
@@ -121,14 +146,14 @@
 
   .main-index__form-button {
     position: relative;
-    top: 0;
-    margin-left: 190px;
+    top: -2px;
+    left: 100px;
     margin-bottom: 267px;
   }
 
   .main-index__image {
     position: absolute;
-    top: -70px;
+    top: -80px;
     left: 39%;
     width: 552px;
     height: auto;

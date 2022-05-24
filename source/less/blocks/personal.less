@@ -3,7 +3,6 @@
   border-bottom: 1px solid #d9d9d9;
 }
 
-
 .personal__group {
   display: flex;
   align-items: center;
@@ -22,8 +21,16 @@
   margin-right: 12px;
 }
 
+.personal__title-weight {
+  width: 100px;
+}
+
+.personal__title-age {
+  width: 200px;
+}
+
 .personal__input {
-  min-height: 45px;
+  height: 41px;
   width: calc(100% - 10px);
   padding: 0 15px;
   font-family: "Oswald", "Arial", sans-serif;
@@ -34,23 +41,36 @@
   text-transform: uppercase;
   color: #444444;
   border: 1px solid #e7e7e7;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
 }
 
 
 @media (min-width: @tablet-width) {
   .personal {
     padding: 0;
-    margin-bottom: 72px;
+    margin-bottom: 48px;
     border-style: none;
   }
 
   .personal__group {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 20px;
   }
 
   .personal__input {
-    min-height: 52px;
+    min-height: 50px;
     font-size: 20px;
     line-height: 30px;
     padding: 0 18px;
@@ -60,9 +80,10 @@
 
 @media (min-width: @desktop-width) {
   .personal {
-    width: 50%;
+    width: 47%;
     margin: 0;
     margin-right: 80px;
+    margin-bottom: 0;
   }
 
   .personal__wrapper {

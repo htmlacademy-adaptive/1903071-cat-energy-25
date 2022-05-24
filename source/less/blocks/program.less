@@ -6,6 +6,7 @@
 
 
 .program__control {
+  position: relative;
   display: block;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -14,8 +15,40 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
+  padding-left: 45px;
   margin-bottom: 25px;
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
+
+.program__control-mark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+
+  &:hover {
+    border: 1px solid #bababa;
+  }
+}
+
+.program__input:checked + .program__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 13px;
+  height: 13px;
+  background-color: #68b738;
+  border-radius: 50%;
+}
+
 
 @media (min-width: @tablet-width) {
   .program {
@@ -25,7 +58,7 @@
   }
 
   .program__wrapper {
-    padding: 30px 88px 7px;
+    padding: 30px 88px 7px 28px;
     border: 1px solid #e7e7e7;
     box-sizing: border-box;
   }
@@ -34,6 +67,12 @@
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 23px;
+    padding-left: 60px;
+  }
+
+  .program__control-mark {
+    width: 40px;
+    height: 40px;
   }
 }
 

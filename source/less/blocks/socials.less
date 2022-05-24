@@ -12,10 +12,35 @@
   width: 132px;
 }
 
+.socials__button {
+  display: block;
+
+  &:hover .socials__button-icon {
+    fill: #68b738;
+  }
+
+  &:active .socials__button-icon {
+    opacity: 0.3;
+  }
+}
+
+.socials__button-icon {
+  fill: #666666;
+}
+
 
 @media (min-width: @tablet-width) {
   .socials {
     border-style: none;
     padding: 0;
+    margin-left: 20px;
+    margin-top: 5px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .socials {
+    margin-left: 30px;
   }
 }

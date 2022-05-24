@@ -7,6 +7,8 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="css/style.min.css" as="style">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
@@ -30,7 +32,7 @@
               <a class="site-list__link main-nav-inner-link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link main-nav-inner-link" href="form.html">Подбор программы</a>
+              <a class="site-list__link site-list__link--active main-nav-inner-link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -45,15 +47,15 @@
           <fieldset class="application__group personal">
             <div class="application__wrapper personal__wrapper">
               <label class="personal__group">
-                <span class="personal__title">Имя:*</span>
+                <span class="personal__title personal__title-name">Имя:*</span>
                 <input class="personal__input" type="text" name="name" required>
               </label>
               <label class="personal__group">
-                <span class="personal__title">Вес (кг):*</span>
+                <span class="personal__title personal__title-weight">Вес (кг):*</span>
                 <input class="personal__input" type="text" name="weight" required>
               </label>
               <label class="personal__group">
-                <span class="personal__title">Возраст (лет):</span>
+                <span class="personal__title personal__title-age">Возраст (лет):</span>
                 <input class="personal__input" type="text" name="age">
               </label>
             </div>
@@ -61,15 +63,18 @@
           <fieldset class="application__group program">
             <div class="application__wrapper program__wrapper">
               <label class="program__control">
-                <input class="program__input" type="radio" name="program-selection" value="weight-loss" checked>
+                <input class="program__input visually-hidden" type="radio" name="program-selection" value="weight-loss" checked>
+                <span class="program__control-mark"></span>
                 <span class="program__label">Похудение</span>
               </label>
               <label class="program__control">
-                <input class="program__input" type="radio" name="program-selection" value="weight-gain">
+                <input class="program__input visually-hidden" type="radio" name="program-selection" value="weight-gain">
+                <span class="program__control-mark"></span>
                 <span class="program__label">Набор массы</span>
               </label>
               <label class="program__control">
-                <input class="program__input" type="radio" name="program-selection" value="dont-know">
+                <input class="program__input visually-hidden" type="radio" name="program-selection" value="dont-know">
+                <span class="program__control-mark"></span>
                 <span class="program__label">Не знаю (Нужен ваш совет)</span>
               </label>
             </div>
@@ -82,20 +87,20 @@
             <ul class="contacts-details__list">
               <li class="contacts-details__item">
                 <label class="contacts-details__group">
-                  <span class="contacts-details__title">E-mail:*</span>
+                  <span class="contacts-details__title contacts-details__title-email">E-mail:*</span>
                   <input class="contacts-details__input input-email" type="email" name="email" required>
                 </label>
                 <svg class="contacts-details__icon contacts-details__icon-email" width="20" height="15" aria-hidden="true" focusable="false">
-                  <use href="img/sprite.svg#email-icon"></use>
+                  <use href="img/sprite.svg#icon-email"></use>
                 </svg>
               </li>
               <li class="contacts-details__item">
                 <label class="contacts-details__group">
-                  <span class="contacts-details__title">Телефон:*</span>
+                  <span class="contacts-details__title contacts-details__title-phone">Телефон:*</span>
                   <input class="contacts-details__input input-phone" type="tel" name="phone" required>
                 </label>
                 <svg class="contacts-details__icon contacts-details__icon-phone" width="20" height="21" aria-hidden="true" focusable="false">
-                    <use href="img/sprite.svg#phone-icon"></use>
+                  <use href="img/sprite.svg#icon-phone"></use>
                 </svg>
               </li>
             </ul>
@@ -113,25 +118,29 @@
             <ul class="additionally__list">
               <li class="additionally__item">
                 <label class="additionally__control">
-                  <input class="additionally__input" type="checkbox" name="sweetener" checked>
+                  <input class="additionally__input visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="additionally__control-mark"></span>
                   <span class="additionally__label">Сахарозаменитель</span>
                 </label>
               </li>
               <li class="additionally__item">
                 <label class="additionally__control">
-                  <input class="additionally__input" type="checkbox" name="water">
+                  <input class="additionally__input visually-hidden" type="checkbox" name="water">
+                  <span class="additionally__control-mark"></span>
                   <span class="additionally__label">Питьевая вода</span>
                 </label>
               </li>
               <li class="additionally__item">
                 <label class="additionally__control">
-                  <input class="additionally__input" type="checkbox" name="milk">
+                  <input class="additionally__input visually-hidden" type="checkbox" name="milk">
+                  <span class="additionally__control-mark"></span>
                   <span class="additionally__label">Молоко</span>
                 </label>
               </li>
               <li class="additionally__item">
                 <label class="additionally__control">
-                  <input class="additionally__input" type="checkbox" name="vitamins">
+                  <input class="additionally__input visually-hidden" type="checkbox" name="vitamins">
+                  <span class="additionally__control-mark"></span>
                   <span class="additionally__label">Витамины</span>
                 </label>
               </li>
@@ -166,21 +175,21 @@
             <li class="socials__item">
               <a class="socials__button vkontakte" href="https://vk.com/htmlacademy" aria-label="Страница html-academy в vk.">
                 <svg class="socials__button-icon" width="27" height="17">
-                  <use href="img/sprite.svg#vk-icon"></use>
+                  <use href="img/sprite.svg#vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__button youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="Страница html-academy в youtube.">
                 <svg class="socials__button-icon" width="24" height="19">
-                  <use href="img/sprite.svg#youtube-icon"></use>
+                  <use href="img/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__button telegram" href="tg://resolve?domain=htmlacademy" aria-label="Telegram html-academy.">
                 <svg class="socials__button-icon" width="20" height="18">
-                  <use href="img/sprite.svg#tg-icon"></use>
+                  <use href="img/sprite.svg#telegram"></use>
                 </svg>
               </a>
             </li>
@@ -188,7 +197,9 @@
         </section>
         <a class="html-academy" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="html-academy__text">HTML Academy</span>
-          <img class="html-academy__logo" src="img/html-academy.svg" width="27" height="34" alt="Логотип HTML Academy.">
+          <svg class="html-academy__logo" width="35" height="40">
+            <use href="img/sprite.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>

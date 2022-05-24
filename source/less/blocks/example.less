@@ -1,6 +1,6 @@
 .example {
   background-color: #eaeaea;
-  padding: 25px 0 40px;
+  padding: 25px 0 30px;
 }
 
 .example__wrapper {
@@ -21,6 +21,8 @@
 }
 
 .example__description {
+  font-size: 14px;
+  line-height: 18px;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -83,7 +85,7 @@
   text-transform: uppercase;
   color: #000000;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 
@@ -138,8 +140,8 @@
 
   .example__description-second {
     position: absolute;
-    right: 30px;
-    top: 270px;
+    right: 34px;
+    top: 260px;
     width: 174px;
     text-align: right;
     font-size: 20px;
@@ -154,6 +156,7 @@
 @media (min-width: @desktop-width) {
   .example {
     background-image: linear-gradient(to bottom, #ffffff, #ffffff 20%, #f2f2f2 20%, #f2f2f2 100%);
+    padding-bottom: 73px;
   }
 
   .example__wrapper {
@@ -171,14 +174,28 @@
     margin-bottom: 69px;
   }
 
+  .example__statistic-item {
+    margin-bottom: 58px;
+  }
+
   .example__statistic-term {
     background-color: #f2f2f2;
   }
 
   .example__description-second {
     position: static;
-    width: 270px;
+    width: 330px;
     margin: 0;
     text-align: center;
+  }
+
+  .example__description-price {
+    margin-left: 50px;
+  }
+
+  .example__slider {
+    position: absolute;
+    top: -43px;
+    right: 77px;
   }
 }

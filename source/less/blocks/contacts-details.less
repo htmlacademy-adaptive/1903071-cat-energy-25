@@ -1,5 +1,5 @@
 .contacts-details {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .contacts-details__group-title {
@@ -47,8 +47,12 @@
   margin-right: 12px;
 }
 
+.contacts-details__title-email {
+  width: 90px;
+}
+
 .contacts-details__input {
-  min-height: 45px;
+  min-height: 41px;
   width: calc(100% - 10px);
   padding: 0 40px 0 15px;
   font-family: "Oswald", "Arial", sans-serif;
@@ -59,14 +63,34 @@
   text-transform: uppercase;
   color: #444444;
   border: 1px solid #cdcdcd;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+  }
+
+  &:focus .contacts-details__icon:focus {
+    fill: #68b738;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
+
+  &:invalid .contacts-details__icon {
+    fill: #ff8282;
+  }
 }
 
 .contacts-details__icon {
   position: absolute;
-  fill: none;
 }
 
 .contacts-details__icon-email {
+  fill: none;
   right: 18px;
   top: 16px;
 }
@@ -79,12 +103,13 @@
 
 @media (min-width: @tablet-width) {
   .contacts-details {
-    margin-bottom: 65px;
+    margin-bottom: 45px;
   }
 
   .contacts-details__group-title {
     padding-left: 70px;
     margin-left: 0;
+    margin-bottom: 72px;
     width: 550px;
 
     &::after {
@@ -109,6 +134,7 @@
   .contacts-details__group {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 19px;
   }
 
   .contacts-details__input {
@@ -131,6 +157,10 @@
 
 
 @media (min-width: @desktop-width) {
+  .contacts-details {
+    margin-bottom: 50px;
+  }
+
   .contacts-details__list {
     display: grid;
     grid-template-columns: 1fr 1fr;

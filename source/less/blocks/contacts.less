@@ -6,12 +6,10 @@
   }
 }
 
-
 .contacts__header {
   display: flex;
-  padding: 26px 20px;
+  padding: 30px 20px 26px;
 }
-
 
 .contacts__title {
   font-family: "Oswald", "Arial", sans-serif;
@@ -45,7 +43,7 @@
     width: calc(100% - 140px);
     display: flex;
     justify-content: space-between;
-    padding: 60px 70px 56px;
+    padding: 58px 70px 58px;
   }
 
   .contacts__title {
@@ -68,10 +66,20 @@
 
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+  }
+
   .contacts__header {
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-50%);
     width: 565px;
-    padding: 60px 70px 56px;
+    padding: 54px 70px 60px 80px;
     box-sizing: border-box;
+    background-color: #ffffff;
+    z-index: 1;
   }
 
   .contacts__address {
