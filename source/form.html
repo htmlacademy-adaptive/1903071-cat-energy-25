@@ -8,7 +8,6 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
-    <link rel="preload" href="css/style.min.css" as="style">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
@@ -89,19 +88,19 @@
                 <label class="contacts-details__group">
                   <span class="contacts-details__title contacts-details__title-email">E-mail:*</span>
                   <input class="contacts-details__input input-email" type="email" name="email" required>
+                  <svg class="contacts-details__icon contacts-details__icon-email" width="20" height="15" aria-hidden="true" focusable="false">
+                    <use href="img/sprite.svg#icon-email"></use>
+                  </svg>
                 </label>
-                <svg class="contacts-details__icon contacts-details__icon-email" width="20" height="15" aria-hidden="true" focusable="false">
-                  <use href="img/sprite.svg#icon-email"></use>
-                </svg>
               </li>
               <li class="contacts-details__item">
                 <label class="contacts-details__group">
                   <span class="contacts-details__title contacts-details__title-phone">Телефон:*</span>
                   <input class="contacts-details__input input-phone" type="tel" name="phone" required>
+                  <svg class="contacts-details__icon contacts-details__icon-phone" width="20" height="21" aria-hidden="true" focusable="false">
+                    <use href="img/sprite.svg#icon-phone"></use>
+                  </svg>
                 </label>
-                <svg class="contacts-details__icon contacts-details__icon-phone" width="20" height="21" aria-hidden="true" focusable="false">
-                  <use href="img/sprite.svg#icon-phone"></use>
-                </svg>
               </li>
             </ul>
           </div>

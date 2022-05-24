@@ -72,15 +72,26 @@
     border: 2px solid #444444;
   }
 
-  &:focus .contacts-details__icon:focus {
+  &:focus + .contacts-details__icon-email {
+    fill: none;
+    stroke: #68b738;
+  }
+
+  &:focus + .contacts-details__icon-phone {
     fill: #68b738;
   }
+
 
   &:invalid {
     border: 2px solid #ff8282;
   }
 
-  &:invalid .contacts-details__icon {
+  &:invalid + .contacts-details__icon-email {
+    fill: none;
+    stroke: #ff8282;
+  }
+
+  &:invalid + .contacts-details__icon-phone {
     fill: #ff8282;
   }
 }
@@ -93,6 +104,7 @@
   fill: none;
   right: 18px;
   top: 16px;
+  stroke: #222222;
 }
 
 .contacts-details__icon-phone {
