@@ -1,11 +1,10 @@
 .bounty {
   position: relative;
   padding: 0 20px;
-  width: 100%;
+  width: 280px;
   height: 290px;
   background: url("../img/bounty-bg-image.jpg") no-repeat 20px;
-  box-sizing: border-box;
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bounty-bg-image@2x.jpg");
@@ -14,8 +13,9 @@
 
   &::after {
     position: absolute;
+    left: 20px;
     content: "";
-    width: calc(100% - 40px);
+    width: 280px;
     height: 100%;
     background-color: rgba(104, 183, 56, 0.85);
     z-index: 1;
@@ -53,14 +53,16 @@
 
 @media (min-width: @tablet-width) {
   .bounty {
+    width: 648px;
     height: 200px;
-    padding: 0;
+    padding: 0 30px;
     background-size: cover;
     background-position: 0 60%;
     margin-bottom: 76px;
 
     &::after {
-      width: 100%;
+      width: 708px;
+      left: 0;
     }
 
     &::before {

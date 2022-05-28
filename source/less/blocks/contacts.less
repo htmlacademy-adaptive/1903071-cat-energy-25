@@ -9,6 +9,8 @@
 .contacts__header {
   display: flex;
   padding: 30px 20px 26px;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .contacts__title {
@@ -40,7 +42,7 @@
 
 @media (min-width: @tablet-width) {
   .contacts__header {
-    width: calc(100% - 140px);
+    width: 628px;
     display: flex;
     justify-content: space-between;
     padding: 58px 70px 58px;
@@ -57,6 +59,15 @@
     line-height: 20px;
     text-align: right;
     width: 160px;
+  }
+
+  .contacts__address-street {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .contacts__address-town {
+    display: block;
   }
 
   .contacts__map {
@@ -76,6 +87,7 @@
     left: 110px;
     transform: translateY(-50%);
     width: 565px;
+    min-height: 198px;
     padding: 54px 70px 60px 80px;
     box-sizing: border-box;
     background-color: #ffffff;

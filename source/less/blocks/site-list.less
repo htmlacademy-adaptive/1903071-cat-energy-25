@@ -5,6 +5,16 @@
   padding: 0;
 }
 
+.site-list__item {
+  &:first-child {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  &:last-child .site-list__link {
+    border-style: none;
+  }
+}
+
 .site-list__link {
   display: block;
   font-family: "Oswald", "Arial", sans-serif;
@@ -25,12 +35,14 @@
 @media (min-width: @tablet-width) {
   .site-list {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 42px;
     margin-bottom: 74px;
   }
 
   .site-list__item:not(:nth-child(3)) {
     margin-right: 34px;
+    border-style: none;
   }
 
   .site-list__link {
@@ -64,7 +76,7 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    margin: 69px 110px 0 130px;
+    margin: 69px 0 0 220px;
   }
 
   .site-list__link {

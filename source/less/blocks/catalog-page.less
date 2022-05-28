@@ -1,25 +1,33 @@
+.catalog-page__top {
+  border-bottom: 1px solid #ebebeb;
+}
+
 .catalog-page__title {
-  display: block;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: #000000;
-  margin: 0;
   padding: 27px 20px 40px;
-  border-bottom: 1px solid #ebebeb;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 
 @media (min-width: @tablet-width) {
-  .catalog-page {
+  .catalog-page__top {
+    border-style: none;
+    width: 708px;
     padding: 0 30px;
+    margin: 0 auto;
   }
 
   .catalog-page__title {
     font-size: 60px;
     line-height: 60px;
+    width: 100%;
     padding: 0;
     margin-bottom: 82px;
     border-style: none;
@@ -28,13 +36,38 @@
 
 
 @media (min-width: @desktop-width) {
-  .catalog-page {
+  .catalog-page__top {
+    width: 1220px;
     padding: 0 110px;
+    margin-top: -34px;
+  }
+
+  .catalog-page__title {
+    width: 431px;
+    margin: 0 auto 82px 0;
   }
 
   .catalog-page__bottom {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 22px;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #68b738;
+      z-index: -1;
+    }
+  }
+
+  .catalog-page__bottom-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1220px;
+    padding: 0 110px;
+    margin: 0 auto;
   }
 }
