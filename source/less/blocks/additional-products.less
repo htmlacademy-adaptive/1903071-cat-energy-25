@@ -1,5 +1,22 @@
+.additional-products {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: #68b738;
+    z-index: -1;
+  }
+}
+
 .additional-products__wrapper {
+  width: 280px;
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 .additional-products__title {
@@ -10,25 +27,22 @@
   font-size: 24px;
   line-height: 24px;
   color: #000000;
-  padding: 25px 0 36px 0;
-  margin: 0 20px 0 20px;
-  border-bottom: 1px solid #cdcdcd;
-
-  &::after {
-    position: absolute;
-    top: 38px;
-    right: -20px;
-    content: "";
-    width: 53px;
-    height: 2px;
-    background-color: #68b738;
-  }
+  background-color: #ffffff;
+  width: 226px;
+  padding: 25px 20px 35px 0;
+  margin: 0;
 }
 
 
 @media (min-width: @tablet-width) {
   .additional-products {
     margin-bottom: 69px;
+
+    &::after {
+      top: 22px;
+      left: 0;
+      width: 100%;
+    }
   }
 
   .additional-products__title {
@@ -38,54 +52,33 @@
     padding: 0 36px;
     margin: 0 0 80px 0;
     border-style: none;
-
-    &::after {
-      top: 22px;
-      left: 100%;
-      width: 328px;
-    }
-
-    &::before {
-      position: absolute;
-      top: 22px;
-      right: 100%;
-      content: "";
-      height: 2px;
-      width: 30px;
-      background-color: #68b738;
-    }
   }
 
   .additional-products__wrapper {
-    padding: 0;
+    width: 708px;
+    padding: 0 30px;
+    margin: 0 auto;
   }
 }
 
 
 @media (min-width: @desktop-width) {
   .additional-products {
-    width: 896px;
     margin-right: 80px;
     margin-bottom: 50px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .additional-products__title {
-    padding: 0;
-    padding-right: 35px;
-
-    &::after {
-      width: 950px;
-      left: 100%;
-    }
-
-    &::before {
-      width: 70px;
-      right: calc(100% + 30px);
-    }
+    padding: 0 35px;
+    margin-left: -35px;
   }
 
   .additional-products__wrapper {
-    border-style: none;
-    border-top: 1px solid #cdcdcd;
+    width: 896px;
+    padding: 0;
   }
 }

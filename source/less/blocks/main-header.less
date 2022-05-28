@@ -1,5 +1,12 @@
-.main-header {
+.main-header,
+.main-header--inner {
   min-height: 65px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.main-header__wrapper {
+  width: 320px;
+  margin: 0 auto;
 }
 
 .main-header__logo {
@@ -7,7 +14,6 @@
   align-items: center;
   padding-top: 12px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #e6e6e6;
 
   &:hover {
     opacity: 0.8;
@@ -26,16 +32,21 @@
 
 
 @media (min-width: @tablet-width) {
-  .main-header {
+  .main-header,
+  .main-header--inner {
+    border-style: none;
+  }
+
+  .main-header__wrapper {
     display: flex;
     padding: 0 30px;
+    width: 708px;
   }
 
   .main-header__logo {
     display: block;
     margin-right: 93px;
     margin-top: 24px;
-    border-style: none;
     padding: 0;
   }
 
@@ -53,13 +64,57 @@
 
 @media (min-width: @desktop-width) {
   .main-header {
-    padding: 0 0 0 110px;
+    position: relative;
+    top: 0;
+    right: 0;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      content: "";
+      width: 50%;
+      height: 694px;
+      background-color: rgba(104, 183, 56, 0.85);
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      content: "";
+      background: url("../../img/background-cat-desktop.jpg") no-repeat;
+      background-size: cover;
+      width: 50%;
+      height: 694px;
+      z-index: -2;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background-cat-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
+    }
+
+    .main-header--inner {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .main-header__wrapper {
+    width: 1220px;
+    padding: 0 110px;
     align-items: flex-start;
   }
 
   .main-header__logo {
     margin-top: 53px;
-    margin-bottom: 74px;
   }
 
   .main-header__logo-image {

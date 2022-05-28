@@ -1,22 +1,25 @@
 .additionally {
-  margin-bottom: 17px;
-}
-
-.additionally__group-title {
   position: relative;
-  width: 160px;
-  margin-left: 20px;
-  margin-bottom: 39px;
+  margin-bottom: 18px;
 
   &::after {
     position: absolute;
     top: 14px;
-    left: 100%;
+    left: 50%;
     content: "";
-    width: 136px;
+    width: 50%;
     height: 2px;
     background-color: #68b738;
+    z-index: -1;
   }
+}
+
+.additionally__group-title {
+  width: 141px;
+  margin-left: -20px;
+  margin-bottom: 39px;
+  padding: 0 20px;
+  background-color: #ffffff;
 }
 
 .additionally__list {
@@ -30,10 +33,6 @@
   display: block;
   margin-bottom: 18px;
   padding-left: 46px;
-
-  &:disabled {
-    opacity: 0.3;
-  }
 }
 
 .additionally__control-mark {
@@ -60,6 +59,18 @@
   background: url("../img/checked.svg") no-repeat center;
 }
 
+.additionally__input:disabled + .additionally__control-mark {
+  opacity: 0.3;
+}
+
+.additionally__input:focus + .additionally__control-mark {
+  border: 1px solid #222222;
+}
+
+.additionally__input:disabled ~ .additionally__label {
+  opacity: 0.3;
+}
+
 .additionally__label {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -74,31 +85,21 @@
 @media (min-width: @tablet-width) {
   .additionally {
     margin-bottom: 59px;
-  }
-
-  .additionally__group-title {
-    padding-left: 70px;
-    margin-left: 0;
-    margin-bottom: 60px;
-    width: 250px;
 
     &::after {
       top: 20px;
-      left: 100%;
-      content: "";
-      width: 446px;
-      height: 2px;
-    }
-
-    &::before {
-      position: absolute;
-      top: 20px;
       left: 0;
       content: "";
-      width: 30px;
+      width: 100%;
       height: 2px;
-      background-color: #68b738;
     }
+  }
+
+  .additionally__group-title {
+    padding: 0 40px;
+    margin-left: -40px;
+    margin-bottom: 60px;
+    width: 215px;
   }
 
   .additionally__list {
@@ -134,26 +135,5 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 80px;
-  }
-
-  .additionally__group-title {
-    padding-left: 110px;
-    margin-left: 0;
-    width: 250px;
-
-    &::after {
-      top: 20px;
-      left: 100%;
-      content: "";
-      width: 1078px;
-    }
-
-    &::before {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      content: "";
-      width: 70px;
-    }
   }
 }

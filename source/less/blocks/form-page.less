@@ -1,3 +1,9 @@
+.form-page__top {
+  width: 280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 .form-page__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -5,7 +11,7 @@
   font-size: 36px;
   line-height: 36px;
   color: #000000;
-  margin: 27px 0 37px 20px;
+  margin: 27px 0 37px 0;
 }
 
 
@@ -19,35 +25,46 @@
   color: #000000;
   margin: 0;
   margin-bottom: 39px;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 
 @media (min-width: @tablet-width) {
+  .form-page__top {
+    width: 631px;
+    padding: 0 67px 0 70px;
+  }
+
   .form-page__title {
+    width: 440px;
     font-size: 60px;
     line-height: 60px;
-    margin: 0 0 54px 70px;
+    margin: 0;
+    margin-bottom: 54px;
   }
 
   .form-page__description {
     width: 323px;
     font-size: 20px;
     line-height: 30px;
-    margin-left: 70px;
+    margin: 0;
     margin-bottom: 66px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
+  .form-page__top {
+    width: 1220px;
+    padding: 0 110px;
+    margin-top: -38px;
+  }
+
   .form-page__title {
-    margin-left: 110px;
     margin-bottom: 56px;
   }
 
   .form-page__description {
-    margin-left: 110px;
     margin-bottom: 64px;
   }
 }

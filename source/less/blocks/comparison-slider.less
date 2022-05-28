@@ -1,6 +1,6 @@
 .comparison-slider__image {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 }
 
 .comparison-slider__image-skinny-cat {
@@ -14,15 +14,19 @@
 
 .comparison-slider__button {
   width: 49px;
+  min-height: 35px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
+  background-color: #eaeaea;
   padding: 0;
   text-transform: uppercase;
   border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .comparison-slider__range {
@@ -42,7 +46,7 @@
   left: 6px;
   top: 50%;
   transform: translateY(-50%);
-  width: 50%;
+  width: 40%;
   height: 6px;
   background-color: #68b738;
   border-radius: 6px;
@@ -50,11 +54,39 @@
 
 
 @media (min-width: @tablet-width) {
-  .comparison-slider__image {
+  .comparison-slider__image-container {
+    display: flex;
     width: 592px;
     height: 511px;
     margin-left: 60px;
-    margin-bottom: 29px;
+    margin-bottom: 26px;
+  }
+
+  .comparison-slider__image-wrapper {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 296px;
+  }
+
+  .comparison-slider__image {
+    position: absolute;
+    width: 592px;
+    height: 511px;
+    margin: 0;
+  }
+
+  .comparison-slider__image-fat-cat {
+    top: 0;
+    left: 10%;
+    object-fit: cover;
+  }
+
+  .comparison-slider__image-skinny-cat {
+    display: block;
+    top: 0;
+    left: -92%;
+    object-fit: fill;
   }
 
   .comparison-slider__button {
@@ -67,7 +99,7 @@
     }
 
     &:active {
-      border-style: none;
+      border-bottom: solid 1px #f2f2f2;
     }
   }
 
@@ -80,7 +112,7 @@
   }
 
   .comparison-slider__range-condition {
-    left: 50%;
+    left: 46%;
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -102,5 +134,16 @@
     &:active {
       border: 1px solid #68b738;
     }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .comparison-slider__image-container {
+    margin-left: 0;
+  }
+
+  .comparison-slider__button {
+    background-color: #f2f2f2;
   }
 }
